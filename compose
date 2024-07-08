@@ -2,3 +2,21 @@ sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-
 sudo chmod +x /usr/local/bin/docker-compose
 docker-compose --version
 sudo docker network create --driver=bridge --subnet=172.30.0.0/16 --gateway=172.30.0.1 data3
+
+
+http://localhost:8080/auth/signup
+{
+    "email":"ocs@ocs.ca",
+    "password":"123",
+    "fullName":"ocs"
+}
+--------------------------------------
+http://144.126.221.182:8080/auth/login
+{
+    "email":"ocs@ocs.ca",
+    "password":"123",
+    "fullName":"ocs"
+}
+----------------------
+http://localhost:8005/users/me
+Authorization Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJURVNUMUBHTUFJTC5DT00iLCJpYXQiOjE3MjAyODQ4MDMsImV4cCI6MTcyMDI4ODQwM30.XnnGhcH9hjgVcQtV__Ndlj9XoX7poeO1clMIYBjmKgU
