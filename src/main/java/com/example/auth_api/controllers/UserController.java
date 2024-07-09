@@ -34,8 +34,21 @@ public class UserController {
     }
 
     @PostMapping("/email")
-    public ResponseEntity<Object> email(@RequestBody Object obj) {
-        System.out.println(obj.toString());
-        return ResponseEntity.ok(obj);
+    public ResponseEntity<Object> emailPost(@RequestBody Object obj) {
+        try{
+            System.out.println(obj.toString());
+            return ResponseEntity.ok(obj);
+        }catch (Exception e){
+            return ResponseEntity.ok(obj);
+        }
+    }
+    @PutMapping("/email")
+    public ResponseEntity<Object> emailPut(@RequestBody Object obj) {
+        try{
+            System.out.println(obj.toString());
+            return ResponseEntity.ok(obj);
+        }catch (Exception e){
+            return ResponseEntity.ok(obj);
+        }
     }
 }
