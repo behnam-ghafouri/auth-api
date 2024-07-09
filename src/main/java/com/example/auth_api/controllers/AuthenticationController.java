@@ -39,4 +39,9 @@ public class AuthenticationController {
 
         return ResponseEntity.ok(loginResponse);
     }
+    @PostMapping("/email")
+    public ResponseEntity<Object> email(@RequestBody Object obj) {
+        System.out.println(obj.toString());
+        return ResponseEntity.ok(obj);
+    }
 }
