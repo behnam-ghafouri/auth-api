@@ -41,7 +41,11 @@ public class AuthenticationController {
     }
     @PostMapping("/email")
     public ResponseEntity<Object> email(@RequestBody Object obj) {
-        System.out.println(obj.toString());
-        return ResponseEntity.ok(obj);
+        try{
+            System.out.println(obj.toString());
+            return ResponseEntity.ok(obj);
+        }catch (Exception e){
+            return ResponseEntity.ok(obj);
+        }
     }
 }
